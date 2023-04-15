@@ -7,7 +7,7 @@ let translateToFrench = ()=>{
             document.getElementById("translated_text").innerHTML = xhttp.responseText;
         }
     };
-    xhttp.open("GET", "englishToFrench?textToTranslate"+"="+textToTranslate, true);
+    xhttp.open("GET", "/englishToFrench?text=" + encodeURIComponent(textToTranslate), true); // Use "/englishToFrench" as the endpoint URL and pass the text as a query parameter
     xhttp.send();
 }
 
@@ -20,7 +20,6 @@ let translateToEnglish = ()=>{
             document.getElementById("translated_text").innerHTML = xhttp.responseText;
         }
     };
-    xhttp.open("GET", "frenchToEnglish?textToTranslate"+"="+textToTranslate, true);
+    xhttp.open("GET", "/frenchToEnglish?text=" + encodeURIComponent(textToTranslate), true); // Use "/frenchToEnglish" as the endpoint URL and pass the text as a query parameter
     xhttp.send();
 }
-
