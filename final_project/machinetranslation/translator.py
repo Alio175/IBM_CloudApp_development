@@ -46,5 +46,5 @@ while True:
         print('English:',frenchToEnglish(frenchText))
     elif text == "q":
         break  
-    else:      
+    else:                                         
         print("Please enter a valid input")
